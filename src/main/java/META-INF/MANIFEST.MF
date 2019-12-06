@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: codesize-1.2.jar robocode.battle-1.9.3.7.jar picocontainer
+ -2.14.2.jar robocode.core-1.9.3.7.jar robocode.repository-1.9.3.7.jar
+  robocode.ui-1.9.3.7.jar robocode.sound-1.9.3.7.jar robocode.jar robo
+ code.ui.editor-1.9.3.7.jar roborumble.jar robocode.host-1.9.3.7.jar b
+ cel-6.2.jar
+
