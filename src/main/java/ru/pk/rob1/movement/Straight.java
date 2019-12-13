@@ -4,6 +4,7 @@ import robocode.HitByBulletEvent;
 import robocode.HitRobotEvent;
 import robocode.HitWallEvent;
 import robocode.Robot;
+import ru.pk.rob1.logger.Logger;
 
 public class Straight implements Movable {
     private Robot robot;
@@ -30,7 +31,9 @@ public class Straight implements Movable {
     @Override
     public void onHitByBullet(HitByBulletEvent event) {
         robot.stop();
-        robot.turnLeft(360-event.getHeading() + 45);
+        double bulletHeading = event.getHeading();
+        Logger.debug("bulletHeading={}, robHeading={}", bulletHeading, robot.getHeading());
+        robot.turnLeft(bulletHeading + 90);
     }
 
 }
