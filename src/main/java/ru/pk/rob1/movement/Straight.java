@@ -33,7 +33,7 @@ public class Straight implements Movable {
         robot.stop();
         double bulletHeading = event.getHeading();
         Logger.debug("bulletHeading={}, robHeading={}", bulletHeading, robot.getHeading());
-        robot.turnLeft(bulletHeading + 90);
+        robot.turnLeft(bulletHeading + 30);
     }
 
 }

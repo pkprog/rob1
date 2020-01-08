@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="rob1_main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts</output-path>
+    <root id="root">
+      <element id="archive" name="rob1_main.jar">
+        <element id="module-output" name="rob1_main" />
+      </element>
+    </root>
+  </artifact>
+</component>
