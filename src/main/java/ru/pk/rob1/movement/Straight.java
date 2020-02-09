@@ -15,25 +15,35 @@ public class Straight implements Movable {
 
     @Override
     public void move() {
-        robot.ahead(80);
+        robot.ahead(100);
     }
 
     @Override
     public void onHitWall(HitWallEvent event) {
-        robot.turnLeft(25);
+        robot.stop();
+        if (event.getBearing() > 0) {
+            robot.turnLeft(90);
+        } else {
+            robot.turnRight(90);
+        }
     }
 
     @Override
     public void onHitRobot(HitRobotEvent event) {
-        robot.turnLeft(25);
+        robot.turnLeft(50);
     }
 
     @Override
     public void onHitByBullet(HitByBulletEvent event) {
         robot.stop();
-        double bulletHeading = event.getHeading();
-        Logger.debug("bulletHeading={}, robHeading={}", bulletHeading, robot.getHeading());
-        robot.turnLeft(bulletHeading + 30);
+        if (event.getBearing() > 0) {
+            robot.turnLeft(60);
+        } else {
+            robot.turnRight(60);
+        }
+//        double bulletHeading = event.getHeading();
+//        Logger.debug("bulletHeading={}, robHeading={}", bulletHeading, robot.getHeading());
+//        robot.turnLeft(bulletHeading + 30);
     }
 
 }
