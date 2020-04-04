@@ -15,15 +15,4 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile (name:'robocode', ext:'jar')
-//    compile (name:'bcel-6.2', ext:'jar')
-//    compile (name:'codesize-1.2', ext:'jar')
-//    compile (name:'picocontainer-2.14.2', ext:'jar')
-//    compile (name:'robocode.battle-1.9.3.7', ext:'jar')
-//    compile (name:'robocode.core-1.9.3.7', ext:'jar')
-//    compile (name:'robocode.host-1.9.3.7', ext:'jar')
-//    compile (name:'robocode.repository-1.9.3.7', ext:'jar')
-//    compile (name:'robocode.sound-1.9.3.7', ext:'jar')
-//    compile (name:'robocode.ui-1.9.3.7', ext:'jar')
-//    compile (name:'robocode.ui.editor-1.9.3.7', ext:'jar')
-//    compile (name:'roborumble', ext:'jar')
 }

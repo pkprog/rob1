@@ -12,14 +12,16 @@ public class SimpleGunMove implements GunMovable {
 
     @Override
     public void moveToEnemyBullet(HitByBulletEvent event) {
-        double gunCurrentBearing = (robot.getHeading() > 180 ? robot.getHeading() - 360 : robot.getHeading()) -
+        //robot.turnRight(event.getBearing());
+
+        /*double gunCurrentBearing = (robot.getHeading() > 180 ? robot.getHeading() - 360 : robot.getHeading()) -
                 (robot.getGunHeading() > 180 ? robot.getGunHeading() - 360 : robot.getGunHeading());
         double gunTargetBearing = gunCurrentBearing - event.getBearing();
         if (gunCurrentBearing > 0) {
             robot.turnGunRight(gunTargetBearing);
         } else {
             robot.turnGunLeft(gunTargetBearing);
-        }
+        }*/
     }
 
 }

@@ -2,7 +2,6 @@
   <library name="Gradle: :robocode:">
     <CLASSES>
       <root url="jar://C:/prog/robocode/libs/robocode.jar!/" />
-      <root url="jar://C:/prog/robocode/robocode-1.9.3.7-src.zip!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
