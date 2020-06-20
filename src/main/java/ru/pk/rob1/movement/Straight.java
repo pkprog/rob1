@@ -24,6 +24,23 @@ public class Straight implements Movable {
     }
 
     @Override
+    public void moveFromLineOfFire(double bearing) {
+        //this.isHitByBullet.set(true);
+        robot.turnRight(bearing);
+/*
+        robot.stop();
+        if (event.getBearing() > 0) {
+            robot.turnLeft(60);
+        } else {
+            robot.turnRight(60);
+        }
+*/
+//        double bulletHeading = event.getHeading();
+//        Logger.debug("bulletHeading={}, robHeading={}", bulletHeading, robot.getHeading());
+//        robot.turnLeft(bulletHeading + 30);
+    }
+
+    @Override
     public void onHitWall(HitWallEvent event) {
         if (isHitByBullet.get()) {
             return;
@@ -41,23 +58,5 @@ public class Straight implements Movable {
     public void onHitRobot(HitRobotEvent event) {
         robot.turnLeft(50);
     }
-
-    @Override
-    public void onHitByBullet(HitByBulletEvent event) {
-        //this.isHitByBullet.set(true);
-        robot.turnRight(event.getBearing());
-/*
-        robot.stop();
-        if (event.getBearing() > 0) {
-            robot.turnLeft(60);
-        } else {
-            robot.turnRight(60);
-        }
-*/
-//        double bulletHeading = event.getHeading();
-//        Logger.debug("bulletHeading={}, robHeading={}", bulletHeading, robot.getHeading());
-//        robot.turnLeft(bulletHeading + 30);
-    }
-
 
 }
