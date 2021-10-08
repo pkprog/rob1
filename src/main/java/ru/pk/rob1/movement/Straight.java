@@ -1,10 +1,8 @@
 package ru.pk.rob1.movement;
 
-import robocode.HitByBulletEvent;
 import robocode.HitRobotEvent;
 import robocode.HitWallEvent;
 import robocode.Robot;
-import ru.pk.rob1.logger.Logger;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -26,7 +24,21 @@ public class Straight implements Movable {
     @Override
     public void moveFromLineOfFire(double bearing) {
         //this.isHitByBullet.set(true);
-        robot.turnRight(bearing);
+        robot.stop();
+        if (PositionUtils.hasLocationAtRight(robot)) {
+            robot.turnRight(bearing + 90);
+        } else if (PositionUtils.hasLocationAtLeft(robot)) {
+            robot.turnLeft(bearing + 90);
+        } else {
+            if (PositionUtils.hasLocationAtFront(robot)) {
+                robot.ahead(50);
+            } else if (PositionUtils.hasLocationAtBack(robot)) {
+                robot.back(50);
+            } else {
+                //none
+            }
+        }
+        robot.resume();
 /*
         robot.stop();
         if (event.getBearing() > 0) {
